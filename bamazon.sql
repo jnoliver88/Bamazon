@@ -6,16 +6,19 @@ CREATE DATABASE bamazon_db;
 -- Makes it so all of the following code will affect animals_db --
 USE bamazon_db;
 
--- Creates the table "prodcuts" within animals_db --
+-- Creates the table "products" within bamazon_db --
 CREATE TABLE products (
--- Makes a general column called "item_id" which cannot contain null --
-   item_id INTEGER AUTO_INCREMENT,
--- Makes a string column called "name" which cannot contain null --
-   product_name VARCHAR(50) NOT NULL,
--- Makes a sting column called "department" --
-   department_name VARCHAR(50),
--- Makes an numeric column called "item price" --
-   item_price INTEGER(30),
--- Makes an numeric column called "stock quanity --
-   stock_quanity INTEGER(30)
+  -- Creates a numeric column called "id" which will automatically increment its default value as we create new rows --
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes a string column called "name" which cannot contain null --
+  product_name VARCHAR(50) NOT NULL,
+   -- Makes a string column called "name" which cannot contain null --
+  department_name VARCHAR(50) NOT NULL,
+  
+  -- Makes an numeric column called "price" --
+  price_item INTEGER(30),
+  -- Makes an numeric column called stock" --
+  stock_quantity INTEGER(30),
+  -- Sets id as this table's primary key which means all data contained within it will be unique --
+  PRIMARY KEY (id)
 );

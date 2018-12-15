@@ -56,6 +56,7 @@ function displayProducts() {
             } else {
               console.log("We do not have enough in stock right now");
             }
+          
           })
         })
   })
